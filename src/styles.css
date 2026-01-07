@@ -394,3 +394,108 @@ button {
     margin-bottom: 32px;
     font-weight: 500;
 }
+
+/* Splash Specific Styles */
+.splash-content {
+    text-align: left;
+    color: var(--color-text);
+    padding: 0 12px;
+}
+
+.splash-intro {
+    font-size: 1.5rem;
+    /* Larger introduction */
+    font-weight: 800;
+    margin-bottom: 24px;
+    color: var(--color-victoria);
+}
+
+.splash-block {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 24px;
+    /* More padding */
+    border-radius: 24px;
+    margin-bottom: 32px;
+    border-left: 6px solid var(--color-walter);
+    font-size: 1.1rem;
+    /* Larger text */
+}
+
+.splash-block p {
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+
+.splash-block p:last-child {
+    margin-bottom: 0;
+}
+
+.splash-context {
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+    margin-bottom: 40px;
+    font-style: italic;
+    text-align: center;
+}
+
+.splash-instruction-box {
+    background: white;
+    padding: 32px;
+    border-radius: 24px;
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.splash-instruction-box h3 {
+    font-size: 1rem;
+    color: var(--color-text-light);
+    letter-spacing: 3px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+}
+
+.instruction-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    font-weight: 800;
+    font-size: 1.4rem;
+    margin: 24px 0;
+}
+
+.instruction-visual .divider {
+    font-size: 1rem;
+    color: var(--color-text-light);
+    font-weight: 400;
+}
+
+.small-note {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    opacity: 0.8;
+}
+
+.splash-final-note {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 24px;
+    line-height: 1.4;
+}
+
+/* Responsive adjustments for Splash */
+@media (max-width: 600px) {
+    .splash-content {
+        padding: 0;
+    }
+
+    .splash-intro {
+        font-size: 1.3rem;
+    }
+
+    .instruction-visual {
+        font-size: 1.1rem;
+        gap: 12px;
+    }
+}

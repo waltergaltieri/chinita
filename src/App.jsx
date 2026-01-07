@@ -116,34 +116,55 @@ function App() {
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
-                        style={{ margin: 'auto', textAlign: 'center', width: '100%', maxWidth: '400px', display: 'flex', flexDirection: 'column', height: '100%', justifyContent: 'center' }}
+                        style={{ margin: 'auto', textAlign: 'center', width: '100%', maxWidth: '800px', display: 'flex', flexDirection: 'column', height: '100%', justifyContent: 'center' }}
                     >
-                        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                            <h1 className="title-gradient">Victoria vs Walter</h1>
-                            <p style={{ color: '#6B7280', marginBottom: '40px', fontSize: '1.1rem', letterSpacing: '0.5px' }}>EL DESAFÍO DEFINITIVO</p>
+                        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', overflowY: 'auto' }}>
+                            <h1 className="title-gradient" style={{ marginBottom: '8px', lineHeight: 1.1 }}>Victoria <br /><span style={{ fontSize: '0.6em', color: '#6B7280' }}>vs</span><br /> Walter</h1>
+                            <p style={{ color: '#4B5563', marginBottom: '32px', fontSize: '1rem', letterSpacing: '2px', textTransform: 'uppercase', fontWeight: 600 }}>El desafío definitivo</p>
 
-                            {/* Removed glass-card wrapper for a cleaner "text on background" look */}
                             <motion.div
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 transition={{ delay: 0.5, duration: 1 }}
-                                className="whitespace-pre-line splash-text-clean"
+                                className="splash-content"
                             >
-                                {GAME_DATA.startScreenText}
+                                <p className="splash-intro">🤫 Bueno… te cuento qué es esto.</p>
+
+                                <div className="splash-block">
+                                    <p>Me olvidé de apagar la transcripción en la llamada de hoy... 📝</p>
+                                    <p>Y en vez de borrarla, hice lo más lógico: <strong>¡armé un jueguito!</strong> 🎮</p>
+                                </div>
+
+                                <p className="splash-context">
+                                    Está basado en esa charla real, con <strong>mate 🧉</strong>, historias largas, estrés y algún que otro pedido de masajes 💆‍♀️.
+                                </p>
+
+                                <div className="splash-instruction-box">
+                                    <h3>CÓMO JUGAR</h3>
+                                    <p>Intentá acertar quién dijo qué, o quién hizo qué.</p>
+                                    <div className="instruction-visual">
+                                        <span>⬅️ Victoria</span>
+                                        <span className="divider">vs</span>
+                                        <span>Walter ➡️</span>
+                                    </div>
+                                    <p className="small-note">Vos sos comunista, yo persona de bien.</p>
+                                </div>
+
+                                <p className="splash-final-note">No pienses tanto…<br /><strong>respondé con el ❤️</strong></p>
                             </motion.div>
                         </div>
 
-                        <motion.div style={{ paddingBottom: '20px' }}>
+                        <motion.div style={{ padding: '20px 0' }}>
                             <motion.button
                                 className="btn-primary"
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                                 animate={{ scale: [1, 1.03, 1] }}
                                 transition={{ scale: { duration: 2, repeat: Infinity } }}
-                                style={{ fontSize: '1.2rem', padding: '20px' }}
+                                style={{ fontSize: '1.3rem', padding: '20px', textTransform: 'uppercase', letterSpacing: '1px' }}
                                 onClick={handleStart}
                             >
-                                EMPEZAR
+                                🚀 ¡Empezar!
                             </motion.button>
                         </motion.div>
                     </motion.div>
